@@ -1,0 +1,32 @@
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>разное</title>
+    <section>
+      <li> <a  href="index.html" align="center" style="color:green">
+        <h1>Главная</h1></a> </li>
+     <h2 id="raznoe" align="center"  style="color:blue">Музыка для тренировок, снаряды и упражнения с ними, разное</h2>
+<p>Все спортсмены часто жмут на раз, для потешения своего эго, т.к. на прогрессе это сказывается только плохо.
+Чтоб не травмироваться из-за этого есть калькулятор разовых максимумов работающий для основных движений пауэрлифтинга.
+Калькулятор подсчёта жима на раз позволит вам узнать ваш разовый максимум в упражнении не делая травмоопасные одноповторные подходы.</p>
+<img src="https://avatars.mds.yandex.net/i?id=93841ccc5193349ef1fb3e26ee180b08f001b2c0-12714897-images-thumbs&n=13" alt="">
+<p>вес штанги:</p>
+     <input id="a"/>
+    <p>количество повторений (в  промежутке от 2 до 20):</p>
+      <input id="b"/>
+      <button onclick="func()">жим на раз:</button>
+
+      <p id="result"></p>
+
+      <script>
+         function func(){
+               var a = Number(document.getElementById("a").value);
+               var b = Number(document.getElementById("b").value);
+               var result  = ((a/(1.0278-0.0278*b)) + (a*b/30+a) +  (100*a)/(101.3-2.67123*b))/3;
+
+               document.getElementById("result").innerHTML = result;
+               }
+
+      </script>
+      <section>
