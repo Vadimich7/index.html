@@ -1,0 +1,30 @@
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="stule.css">
+    <meta charset="utf-8">
+    <title>разное</title>
+    <section>
+        <a  href="index.html"  >
+        <h1 class="s">Главная</h1></a>
+        <h3>Заполняте по следующему алгоритму</h3>
+
+        <p>Ваш вес</p>
+             <input id="w"/>
+            <p>Ваш рост в см</p>
+              <input id="f"/>
+              <p>Ваш возраст</p>
+                <input id="e"/>
+              <button onclick="f()">Среднее потребление каллорий в день</button>
+
+              <p id="r"></p>
+
+              <script>
+            function f(){
+                       var w = Number(document.getElementById("w").value);
+                       var f = Number(document.getElementById("f").value);
+                       var e = Number(document.getElementById("e").value);
+                       var r  = 10*w+6.25*f-(5*e+161);
+
+                       document.getElementById("r").innerHTML = r;
+                       }
+                       </script>

@@ -1,0 +1,45 @@
+<html lang="ru">
+  <head>
+    <link rel="stylesheet" href="stule.css">
+    <meta charset="utf-8">
+    <title>разное</title>
+    <section>
+        <a  href="index.html"  >
+        <h1 class="s">Главная</h1></a>
+        <h3 class="b">Жим на раз</h3>
+
+
+<p>Все спортсмены часто жмут на раз, для потешения своего эго, т.к. на прогрессе это сказывается только плохо.
+Чтоб не травмироваться из-за этого есть калькулятор разовых максимумов работающий для основных движений пауэрлифтинга.
+Калькулятор подсчёта жима на раз позволит вам узнать ваш разовый максимум в упражнении не делая травмоопасные одноповторные подходы.</p>
+<img src="https://avatars.mds.yandex.net/i?id=93841ccc5193349ef1fb3e26ee180b08f001b2c0-12714897-images-thumbs&n=13" alt="">
+<p>вес штанги:</p>
+     <input id="a"/>
+    <p>количество повторений (в  промежутке от 2 до 20):</p>
+      <input id="b"/>
+      <button onclick="func()">жим на раз:</button>
+
+      <p id="result"></p>
+
+      <script>
+         function func(){
+               var a = Number(document.getElementById("a").value);
+               var b = Number(document.getElementById("b").value);
+               var result  = ((a/(1.0278-0.0278*b)) + (a*b/30+a) +  (100*a)/(101.3-2.67123*b))/3;
+
+               document.getElementById("result").innerHTML = result;
+               }
+
+      </script>
+      <!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+<script type="text/javascript">
+  VK.init({ apiId: 53172831, onlyWidgets: true });
+</script>
+
+<!-- Put this div tag to the place, where the Comments block will be -->
+<div id="vk_comments"></div>
+<script type="text/javascript">
+  VK.Widgets.Comments("vk_comments", {limit: 20, attach: "*"});
+</script>
+      <section>
